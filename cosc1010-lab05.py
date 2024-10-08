@@ -1,9 +1,9 @@
-# Your Name Here
+# dylan peteron
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
+# Submission Date10/7/2024
+# Lab 05
+# Lab Section: monday 6-8pm
+# Sources, people worked with, help given to: i used the python book and the lecture notes 
 # your
 # comments
 # here
@@ -94,6 +94,26 @@ min_temps = [
 # You cannot use in-built functions like max(), min() or sort the lists
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
+max_temp = max_temps[0]
+min_temp = max_temps[0]
+
+for temp in max_temps:
+    if temp > max_temp:
+        max_temp = temp
+    if temp < min_temp:
+        min_temp = temp
+
+print(f"max tempss - Max: {max_temp}, Min:{min_temp}")
+
+max_min_temp=min_temps[0]
+min_min_temp=min_temps[0]
+
+for temp in min_temps:
+    if temp > max_min_temp:
+        max_min_temp = temp
+    if temp < min_min_temp:
+        min_min_temp = temp
+print(f"Min Temps - Max: {max_min_temp}, min: {min_min_temp}")
 
 print(f"Max temp = {max_temp}")
 print(f"Min temp = {min_temp}")
@@ -104,11 +124,41 @@ numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, 
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
-print(f"Zero occurred {zero_count} time(s)")
+positives = 0
+negative = 0 
+zeros = 0 
+ 
+for num in numbers:
+    if num > 0:
+        positives += 1 
+        print(f"{num} is positive")
+    elif num < 0:
+        negative += 1 
+        print(f"{num} is negitive")
+    else:
+        zeros += 1 
+        print(f"{num} is zero")
+
+print(f" The positives: {positives}, The negatives: {negative}, The zeros: {zeros}")
+
+
+
+#print(f'There are {pos_count} positive numbers')
+#print(f'There are {neg_count} negative numbers')
+#print(f"Zero occurred {zero_count} time(s)")
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
+positiveadd = 0
+negativeadd = 0
+for num in numbers:
+    if num > 0:
+        positiveadd += num 
+    elif num < 0:
+        negativeadd += num 
+print(f"the sum of the positive numbers is :{positiveadd}")
+print(f"the sum of the negitive numbers are: {negativeadd}")
+
+
 
 print(f"Sum of positive numbers {pos_sum}")
 print(f"Sum of negative numbers {neg_sum}")
